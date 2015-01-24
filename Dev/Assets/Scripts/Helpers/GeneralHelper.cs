@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace GGJ15.Helpers
+namespace BJW.Helpers
 {
 	public static class GeneralHelper
 	{
 		public static void Init ()
 		{
-
+			Debug.Log (Scene.Root.LevelSize.ToString ());
 		}
 	}
 }

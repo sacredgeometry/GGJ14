@@ -1,23 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
-using GGJ15.Helpers;
+using BJW.Helpers;
 
-namespace GGJ15
+namespace BJW
 {
-	public static class Root 
+	public static class Scene 
 	{
-		public static Vector3 origin { get; set; }
-	}
-}
-
-public class Root : MonoBehaviour {
-
-	void Awake () {
-		GGJ15.Root.origin = this.transform.position;
-	}
-
-	void Start () {
-
+		public static Root Root = GameObject.FindGameObjectWithTag ("Root").GetComponent<Root>();
 
 	}
 }
+
+/// <summary>
+/// This is the serialised Component that stores all the values, to access them you can use the static reference above
+/// </summary>
+public class Root : MonoBehaviour
+{
+	public Vector2 LevelSize = new Vector2();
+
+}
+
