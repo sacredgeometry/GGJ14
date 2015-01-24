@@ -7,7 +7,6 @@ namespace BJW.Helpers
 	{
 		public static void Init ()
 		{
-			Debug.Log (Scene.Root.LevelSize.ToString ());
 		}
 	}
 }

@@ -16,7 +16,8 @@ namespace BJW
 /// </summary>
 public class Root : MonoBehaviour
 {
-	public Vector2 LevelSize = new Vector2();
-
+	//public Vector2 LevelSize = new Vector2();
+	public Texture2D LevelMap;
+	public Sprite LevelSprite = new Sprite();
 }
 
