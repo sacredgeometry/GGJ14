@@ -6,7 +6,6 @@ public class Debugger : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GeneralHelper.Init();
 	}
 	
 	// Update is called once per frame
