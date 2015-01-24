@@ -7,15 +7,14 @@ namespace BJW.Helpers
 {
 	public static class LevelHelper
 	{
-//		var bounds : Bounds = GetComponent(SpriteRenderer).sprite.bounds;
-//		var xSize = bounds.size.x;
-//		transform.localScale.x = 45.0 / xSize;  
 		
-		public static List<PolygonCollider2D> GenerateColliderGrid(GameObject go, Vector2 amount)
+		public static List<PolygonCollider2D> GenerateColliderGrid(GameObject go, Vector2 amount, Vector3 multiplier)
 		{
 			List<PolygonCollider2D> output = new List<PolygonCollider2D>();
 
 			var screenSize = GeneralHelper.GetScreenSizeInWorldUntits();
+
+			if(multiplier != null) { new Vector2 (screenSize.x / multiplier.x, screenSize.y / multiplier.y); }
 
 			Vector2 blockSize = new Vector2(){
 				x = screenSize.x / amount.x,

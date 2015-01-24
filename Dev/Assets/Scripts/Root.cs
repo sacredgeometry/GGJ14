@@ -7,8 +7,10 @@ namespace BJW
 {
 	public static class Scene 
 	{
-		public static Root Root = GameObject.FindGameObjectWithTag (Constants.Scene.Root).GetComponent<Root>();
-		public static Level Level = GameObject.FindGameObjectWithTag(Constants.Scene.Level).GetComponent<Level>();
+		public static Root Root = GameObject.FindGameObjectWithTag (Constants.Tags.Root).GetComponent<Root>();
+
+		public static Level Level = GameObject.FindGameObjectWithTag(Constants.Tags.Level).GetComponent<Level>();
+		public static GameObject LevelCollider = GameObject.FindGameObjectWithTag(Constants.Tags.LevelCollider);
 	}
 }
 
