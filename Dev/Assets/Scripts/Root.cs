@@ -11,13 +11,9 @@ namespace Tools
 }
 public class Root : MonoBehaviour {
 
-	// Use this for initialization
+
 	void Awake () {
 		Tools.Root.origin = this.transform.position;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }
