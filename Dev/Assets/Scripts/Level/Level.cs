@@ -9,11 +9,6 @@ public class Level : MonoBehaviour
 
 	void Start()
 	{
-		//		var bounds : Bounds = GetComponent(SpriteRenderer).sprite.bounds;
-		//		var xSize = bounds.size.x;
-		//		transform.localScale.x = 45.0 / xSize;  
-
-		// TODO: Set textture to correct resolution
 		_SpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 		transform.localScale = new Vector3(
 			GeneralHelper.GetScreenSizeInWorldUntits().x / _SpriteRenderer.bounds.size.x,
