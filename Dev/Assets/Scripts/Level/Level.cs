@@ -5,6 +5,7 @@ using BJW.Helpers;
 
 public class Level : MonoBehaviour
 {
+	public Texture2D AlphaMatte;
 	private SpriteRenderer _SpriteRenderer;
 
 	void Start()
@@ -17,6 +18,7 @@ public class Level : MonoBehaviour
 		);
 
 
+
 		// TODO: Analyse level alpha matte using chain coding and establish a List<Vector2> of collider shapes
 		// 1. use blocking at the resolution stored in BJW.Scene.Root.LevelColliderResolution
 		// 2. test with a single block first
@@ -24,7 +26,7 @@ public class Level : MonoBehaviour
 
 		// Create Level Colliders
 		List<PolygonCollider2D> LevelColliders = LevelHelper.GenerateColliderGrid(BJW.Scene.LevelCollider, BJW.Scene.Root.LevelColliderResolution, transform.localScale);
-
+		LevelHelper.ConvertAlphaToCollider(AlphaMatte, LevelColliders);
 	}
 
 
